@@ -1,0 +1,71 @@
+@use 'sass:math';
+@import 'utils';
+@import 'globals';
+
+
+html,
+body {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $overpass, $ubuntu;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+// Flexbox
+.flex{
+  display: flex;
+
+  &-c{
+    flex-direction: column;
+  }
+  
+  &-jc-sb{
+    justify-content: space-between;
+  }
+
+  
+  &-jc-c{
+    justify-content: center;
+  }
+
+  &-jc-s{
+    justify-content: start;
+  }
+  
+  &-ai-c{
+    align-items: center;
+  }
+}
+
+
+
+// visibility
+.hide-for-mobile{
+  @include breakpoints-down(medium){
+    display: None
+  }
+}
+
+.hide-for-desktop{
+  @include breakpoints-up(large){
+    display: None;
+  }
+}
+
+// global padding
+.gb-padding{
+  padding: 0 toRem(167);
+  @include breakpoints-down(medium){
+    padding: 0 toRem(21);
+  }
+}
+
