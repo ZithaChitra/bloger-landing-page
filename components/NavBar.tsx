@@ -45,12 +45,16 @@ const Navbar: React.FC = () => {
 
                 <div className={`${styles.navbar__heroe} flex flex-c flex-ai-c flex-jc-s`}>
                     <div className={`${styles.txt}`}>
-                        <h2>A modern publishing platform</h2>
+                        <h1>A modern publishing platform</h1>
                         <p>Grow your audience and build your online brand</p>
                     </div>
-                    <div className={`{btns} flex`}>
-                        <Cto name='Start for free' href='/' />
-                        <Cto name='Learn more' href='/' transparent={true} />
+                    <div className={`${styles.btns} flex flex-jc-s`}>
+                        <div className='pad-sm-r'>
+                            <Cto name='Start for free' href='/' />
+                        </div>
+                        <div className='pad-sm-l'>
+                            <Cto name='Learn more' href='/' transparent={true} />
+                        </div>
                     </div>
                 </div>
             </header>

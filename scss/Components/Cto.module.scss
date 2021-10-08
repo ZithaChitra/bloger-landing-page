@@ -2,34 +2,50 @@
 @import "../utils";
 
 .cto {
-  width: toRem(138);
-  height: toRem(48);
-  text-align: center;
-  border-radius: toRem(math.div(48, 2));
-  background: white;
+  &-w {
+    // @include cto_boiler;
+    width: toRem(138);
+    height: toRem(48);
+    text-align: center;
+    border-radius: toRem(math.div(48, 2));
+    background: white;
+  }
 
-  .t{
+  &-t {
+    // @include cto_boiler;
+    width: toRem(138);
+    height: toRem(48);
+    text-align: center;
+    border-radius: toRem(math.div(48, 2));
     background: transparent;
     border: 1px solid white;
   }
 
   &__a {
-    text-align: center;
-    color: hsl(356, 100%, 66%);
-    font-size: toRem(15);
-    font-weight: 300;
-    text-decoration: none;
-
-    &:hover{
+    // link on transparent background
+    &-t {
+      // @include link_boiler;
+      text-align: center;
+      font-size: toRem(15);
+      text-decoration: none;
+      font-weight: 300;
+      color: white;
+      &:hover {
         text-decoration: underline;
+      }
     }
 
-    .at{
-      color: white;
+    // link on white background
+    &-w {
+      // @include link_boiler;
+      text-align: center;
+      font-size: toRem(15);
+      text-decoration: none;
+      font-weight: 300;
+      color: hsl(356, 100%, 66%);
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-
-  
 }
-
-

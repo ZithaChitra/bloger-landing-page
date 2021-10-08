@@ -46,6 +46,19 @@ body {
   }
 }
 
+// padding
+.pad{
+
+  // small left - 8px
+  &-sm-l{
+    padding-left: toRem(8);
+  }
+
+  &-sm-r{
+    padding-right: toRem(8);
+  }
+}
+
 
 
 // visibility

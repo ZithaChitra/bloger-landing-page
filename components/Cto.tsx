@@ -17,13 +17,13 @@ export class Cto extends React.Component<CtoProps> {
     render() {
         let transparent = this.props.transparent
         let container_class = cx({
-            cto: true,
-            t: transparent ? true : false
+            'cto-w': transparent ? false : true,
+            'cto-t': transparent ? true : false
         })
 
         let a_class = cx({
-            cto__a: true,
-            at: transparent ? true : false
+            'cto__a-t': transparent ? true : false,
+            'cto__a-w': transparent ? false : true
         })
         return (
             <div className={`${container_class} flex flex-ai-c flex-jc-c`}>
