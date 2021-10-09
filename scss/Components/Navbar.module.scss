@@ -65,6 +65,8 @@
     font-size: toRem(15);
     text-decoration: none;
     padding-right: toRem(33);
+    font-family: $overpass;
+    font-weight: 600;
 
 
     &:hover{

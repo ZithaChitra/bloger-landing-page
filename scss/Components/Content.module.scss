@@ -79,6 +79,7 @@
     }
 
     &-2 {
+      border: 1px solid black;
       width: 100%;
       height: toRem(400);
       margin-bottom: toRem(307);
@@ -106,12 +107,11 @@
       }
 
       .image{
-
         &::before{
           background-image: url('../../public/images/illustration-phones.svg');
           background-repeat: no-repeat;
-          height: toRem(502);
-          width: 120%;
+          height: toRem(534);
+          width: 105%;
           transform: translate(-20%, -13%);
         }
       }
@@ -134,12 +134,13 @@
       }
 
       .image{
-        ::before{
+        &::before{
           background-image: url("../../public/images/illustration-laptop-desktop.svg");
           background-repeat: no-repeat;
+          background-position: right 10% center;
           width: 130%;
-          height: toRem(888);
-          background-position: center center;
+          height: toRem(788);
+          transform: translate(-25%, -25%);
         }
       }
     }
