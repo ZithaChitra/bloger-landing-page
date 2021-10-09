@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import React, { Component } from 'react'
 import Header from '../components/NavBar'
 import Content from '../components/Content'
+import Footer from '../components/Footer'
 
 interface cState {
   isToggleOn: boolean
@@ -34,6 +35,7 @@ export class Home extends Component {
       <div>
         <Header />
         <Content />
+        <Footer />
 
         {/* Product
         
