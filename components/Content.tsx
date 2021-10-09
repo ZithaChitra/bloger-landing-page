@@ -3,12 +3,12 @@ import styles from '../styles/Components/Content.module.css'
 
 function Content() {
     return (
-        <div className={`${styles.content} gb-padding`}>
+        <div className={`${styles.content} `}>
             <h2>
                 Designed for the future
             </h2>
 
-            <section className={`${styles.content__section} flex`}>
+            <section className={`${styles.content__section} ${styles['content__section-1']} flex gb-padding`}>
                 <div className={`${styles.image}`}></div>
                 <div className={`${styles.txt}`}>
                     <h3>Introducing an extensible editor</h3>
@@ -28,14 +28,30 @@ function Content() {
                 </div>
             </section>
 
+
+            <section className={`${styles.content__section} ${styles['content__section-2']}`}>
+                <div className='gb-padding flex'>
+                    <div className={`${styles.image}`}></div>
+                    <div className={`${styles.txt}`}>
+                        <h2>State of the Art Infrastructure</h2>
+                        <p>
+                            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+                            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
             {/* 
 
             
-            
-
-            State of the Art Infrastructure
-            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        
 
             Free, open, simple
             Blogr is a free and open source application backed by a large community of helpful developers. It supports
