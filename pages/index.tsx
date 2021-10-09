@@ -67,30 +67,6 @@ export class Home extends Component {
         Start for Free
         Learn More
 
-        
-
-        // ____footer____
-
-        Product
-
-        Overview
-        Pricing
-        Marketplace
-        Features
-        Integrations
-
-        Company
-
-        About
-        Team
-        Blog
-        Careers
-
-        Connect
-
-        Contact
-        Newsletter
-        LinkedIn
 
         <div className="attribution">
           Challenge by

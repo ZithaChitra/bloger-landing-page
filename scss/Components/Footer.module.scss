@@ -37,6 +37,10 @@
             color: white;
             font-size: toRem(15);
             color: $grayish-blue;
+
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 }
