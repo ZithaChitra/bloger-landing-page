@@ -1,0 +1,78 @@
+@use '../util' as *;
+
+
+.nav {
+  width: calc(100% - rem(40));
+  margin: 0 auto;
+  margin-bottom: rem(100);
+
+  @include breakpoints-up(large){
+    width: calc(100% - rem(320));
+    margin: 0 auto;
+    margin-bottom: rem(140);
+  }
+
+
+  &__logo {
+    width: rem(72);
+    height: rem(28);
+
+    @include breakpoints-up(large){
+      margin-right: rem(64);
+    }
+  }
+  
+
+  &__links {
+
+    a{
+      display: inline-block;
+      font-family: var(--overpass);
+      font-size: rem(15);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 300ms ease-out;
+      color: white;
+
+      &:not(:last-child){
+        margin-right: rem(48);
+      }
+    }
+  }
+
+
+  &__cta{
+
+    a{
+
+      &:first-child{
+        display: inline-block;
+        font-family: var(--overpass);
+        font-size: rem(15);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 300ms ease-out;
+        margin-right: rem(32);
+        color: white;
+      }
+    }
+  
+
+  }
+
+
+  &__toggle {
+    // mobile menu toggle
+    span {
+      display: block;
+      width: rem(26);
+      height: rem(2);
+      background-color: white;
+      transition: all 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

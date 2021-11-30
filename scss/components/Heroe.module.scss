@@ -1,0 +1,62 @@
+@use 'sass:math';
+@use '../util' as *;
+
+
+.heroe{
+    position: relative;
+    height: rem(523);
+    background: var(--light-red);
+    background-origin: border-box;
+    background: url('../../public/images/bg-pattern-intro.svg') no-repeat top 57% right 65%, linear-gradient(45deg, var(--very-light-red), var(--light-red));
+    background-size: 300%;
+    border-bottom-left-radius: rem(math.div(98, 1)) rem(math.div(98, 1));
+    padding-top: rem(40);
+
+    &__text{
+        
+        // 💊 It is said that mixing selectors (classes and element tags)
+        // is not good practice. We'll accept here 🤠 
+        
+        h1{
+            font-size: rem(26);
+            line-height: rem(39);
+            font-family: var(--overpass);
+            width: calc(100% - rem(68));
+            margin: 0 auto;
+            margin-bottom: rem(20);
+            color: white;
+            text-align: center;
+
+            @include breakpoints-up(large){
+                font-size: rem(48);
+                margin-bottom: rem(25);
+            }
+        }
+
+        p{
+            font-size: rem(16);
+            line-height: rem(20);
+            width: calc(100% - rem(90));
+            margin: 0 auto;
+            margin-bottom: rem(46);
+            text-align: center;
+            color: white;
+
+            @include breakpoints-up(large){
+                font-size: rem(20);
+                margin-bottom: rem(50);
+            }
+
+        }
+    }
+
+
+    &__cta{
+        a{
+            &:first-child{
+                margin-right: rem(20);
+            }
+        }
+    }
+}
+

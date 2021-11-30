@@ -1,65 +1,44 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
-import Cto from './Cto'
+import Link from 'next/link' 
 
-import styles from '../styles/Components/Navbar.module.css'
-import logo from '../public/images/logo.svg';
+import styles from '../styles/components/Navbar.module.css'
+import logo from '../public/images/logo.svg'
 
-const Navbar: React.FC = () => {
+
+const NavBar = () => {
     return (
-        <div>
-            <header className={`${styles.navbar}`}>
-                <nav className={`${styles.navbar__nav} flex flex-jc-sb flex-ai-c gb-padding`}>
-
-                    <div className={`navbar__logo-links flex flex-ai-c`}>
-                        <div className={`navbar__logo`}>
-                            <Image src={logo} alt='logo' />
-                        </div>
-
-                        <ul className={`${styles.navbar__links} hide-for-mobile`}>
-                            <Link href='/'>
-                                <a className={`${styles.navbar__a}`}>Product</a>
-                            </Link>
-                            <Link href='/'>
-                                <a className={`${styles.navbar__a}`}>Company</a>
-                            </Link>
-                            <Link href='/'>
-                                <a className={`${styles.navbar__a}`}>Connect</a>
-                            </Link>
-                        </ul>
-                    </div>
-
-
-                    <div className={`${styles.navbar__cto} flex flex-ai-c hide-for-mobile`}>
-                        <Link href='/'><a className={`${styles.navbar__a}`}>Login</a></Link>
-                        <Cto name='Sign Up' href='/' />
-                    </div>
-
-                    <div id='btnHamburger' className={`${styles.navbar__toggle} hide-for-desktop`}>
-                        <span className={`${styles.span}`}></span>
-                        <span className={`${styles.span}`}></span>
-                        <span className={`${styles.span}`}></span>
-                    </div>
-                </nav>
-
-                <div className={`${styles.navbar__heroe} flex flex-c flex-ai-c flex-jc-s`}>
-                    <div className={`${styles.txt}`}>
-                        <h1>A modern publishing platform</h1>
-                        <p>Grow your audience and build your online brand</p>
-                    </div>
-                    <div className={`${styles.btns} flex flex-jc-s`}>
-                        <div className='pad-sm-r'>
-                            <Cto name='Start for free' href='/' />
-                        </div>
-                        <div className='pad-sm-l'>
-                            <Cto name='Learn more' href='/' transparent={true} />
-                        </div>
-                    </div>
+        <div className={`${styles.nav} flex flex-jc-sb`}>
+            <div className='flex flex-ai-c'>
+                <div className={`${styles.nav__logo} img`}>
+                    <Image src={logo} alt='' layout='fill'/>
                 </div>
-            </header>
+
+                <div className={`${styles.nav__links} hide-for-tablet`}>
+                    <Link href='/'><a>Product</a></Link>
+                    <Link href='/'><a>Company</a></Link>
+                    <Link href='/'><a>Connect</a></Link>
+                </div>
+            </div>
+
+
+            <div className={`${styles.nav__cta} hide-for-tablet flex flex-ai-c`}>
+                <Link href='/'><a className=''>Login</a></Link>
+                <Link href='/'><a className='cta'>Sign Up</a></Link>
+            </div>
+
+
+            <div className='hide-for-desktop flex flex-ai-c'>
+                <div className={`${styles.nav__toggle}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+                
+            
         </div>
     )
 }
 
-export default Navbar
+export default NavBar
